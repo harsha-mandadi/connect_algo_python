@@ -14,7 +14,7 @@ class quick_union(object):
         p_root = self.find_root(p)
         q_root = self.find_root(q)
         if(p_root != q_root):
-            self.id[p] = q_root
+            self.id[p_root] = q_root
     def find_if_connected(self,p,q):
         return self.find_root(p) == self.find_root(q)
 connect = quick_union(10)
