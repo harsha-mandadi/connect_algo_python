@@ -14,10 +14,10 @@ class quick_union_weighted(object):
             return
         elif(self.size[p_root]>=self.size[q_root]):
             self.id[q_root] = p_root
-            self.size[q_root] += self.size[p_root]
+            self.size[p_root] += self.size[q_root]
         elif(size[p]<size[q]):
             self.id[p_root] = q_root
-            self.size[p_root] += self.size[q_root]
+            self.size[q_root] += self.size[p_root]
     def find_if_connected(self,p,q):
         return self.find_root(p) == self.find_root(q)
 connect = quick_union_weighted(10)
